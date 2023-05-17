@@ -1,0 +1,86 @@
+solid slopeGW
+ facet normal -0.000000e+00 -1.000000e+00  0.000000e+00
+   outer loop
+     vertex  1.400000e+01  0.000000e+00 -6.965300e-01
+     vertex  7.034900e+00  0.000000e+00 -1.110200e-16
+     vertex  1.393100e+01  0.000000e+00 -1.393100e+00
+   endloop
+ endfacet
+ facet normal -0.000000e+00 -1.000000e+00 -0.000000e+00
+   outer loop
+     vertex  7.034900e+00  0.000000e+00 -1.110200e-16
+     vertex  0.000000e+00  0.000000e+00  0.000000e+00
+     vertex  1.393100e+01  0.000000e+00 -1.393100e+00
+   endloop
+ endfacet
+ facet normal -0.000000e+00 -1.000000e+00  0.000000e+00
+   outer loop
+     vertex  1.400000e+01  1.000000e+00 -6.965300e-01
+     vertex  7.034900e+00  1.000000e+00 -1.110200e-16
+     vertex  1.393100e+01  1.000000e+00 -1.393100e+00
+   endloop
+ endfacet
+ facet normal -0.000000e+00 -1.000000e+00 -0.000000e+00
+   outer loop
+     vertex  7.034900e+00  1.000000e+00 -1.110200e-16
+     vertex  0.000000e+00  1.000000e+00  0.000000e+00
+     vertex  1.393100e+01  1.000000e+00 -1.393100e+00
+   endloop
+ endfacet
+ facet normal  1.578132e-17 -0.000000e+00  1.000000e+00
+   outer loop
+     vertex  0.000000e+00  0.000000e+00  0.000000e+00
+     vertex  7.034900e+00  0.000000e+00 -1.110200e-16
+     vertex  0.000000e+00  1.000000e+00  0.000000e+00
+   endloop
+ endfacet
+ facet normal  9.950655e-02 -0.000000e+00  9.950369e-01
+   outer loop
+     vertex  7.034900e+00  0.000000e+00 -1.110200e-16
+     vertex  1.400000e+01  0.000000e+00 -6.965300e-01
+     vertex  7.034900e+00  1.000000e+00 -1.110200e-16
+   endloop
+ endfacet
+ facet normal  9.951297e-01  0.000000e+00 -9.857437e-02
+   outer loop
+     vertex  1.400000e+01  0.000000e+00 -6.965300e-01
+     vertex  1.393100e+01  0.000000e+00 -1.393100e+00
+     vertex  1.400000e+01  1.000000e+00 -6.965300e-01
+   endloop
+ endfacet
+ facet normal -9.950372e-02  0.000000e+00 -9.950372e-01
+   outer loop
+     vertex  1.393100e+01  0.000000e+00 -1.393100e+00
+     vertex  0.000000e+00  0.000000e+00  0.000000e+00
+     vertex  1.393100e+01  1.000000e+00 -1.393100e+00
+   endloop
+ endfacet
+ facet normal -1.578132e-17  0.000000e+00 -1.000000e+00
+   outer loop
+     vertex  0.000000e+00  1.000000e+00  0.000000e+00
+     vertex  7.034900e+00  1.000000e+00 -1.110200e-16
+     vertex  7.034900e+00  0.000000e+00 -1.110200e-16
+   endloop
+ endfacet
+ facet normal -9.950655e-02  0.000000e+00 -9.950369e-01
+   outer loop
+     vertex  7.034900e+00  1.000000e+00 -1.110200e-16
+     vertex  1.400000e+01  1.000000e+00 -6.965300e-01
+     vertex  1.400000e+01  0.000000e+00 -6.965300e-01
+   endloop
+ endfacet
+ facet normal -9.951297e-01  0.000000e+00  9.857437e-02
+   outer loop
+     vertex  1.400000e+01  1.000000e+00 -6.965300e-01
+     vertex  1.393100e+01  1.000000e+00 -1.393100e+00
+     vertex  1.393100e+01  0.000000e+00 -1.393100e+00
+   endloop
+ endfacet
+ facet normal  9.950372e-02  0.000000e+00  9.950372e-01
+   outer loop
+     vertex  1.393100e+01  1.000000e+00 -1.393100e+00
+     vertex  0.000000e+00  1.000000e+00  0.000000e+00
+     vertex  0.000000e+00  0.000000e+00  0.000000e+00
+   endloop
+ endfacet
+endsolid slopeGW
