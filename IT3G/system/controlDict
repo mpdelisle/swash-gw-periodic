@@ -1,0 +1,125 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.3                                   |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+    location        "system";
+    class           dictionary;
+    object          controlDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     SedGWolaFlow;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         80;
+
+deltaT          0.001;
+
+writeControl    adjustableRunTime;
+
+writeInterval   0.1;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable yes;
+
+adjustTimeStep  yes;
+
+maxCo           0.2; //0.3;
+maxAlphaCo	0.2; //0.3;
+
+maxDeltaT       0.001; //0.01;
+
+libs
+(
+	"libstabRASModels.so"
+);
+
+functions
+{
+    gaugesVOF
+    {
+        type    sets;
+        libs ("libsampling.so");
+        writeControl    outputTime;
+        writeInterval   1;
+        setFormat       raw;
+        surfaceFormat   raw;
+        interpolationScheme cell;
+        fields          ( alpha.water );
+        sets
+        (
+		    GaugeVOF01 // Inlet
+            {
+                type    uniform;
+                axis    xyz;
+                start   ( -5.9623 0.01 0.59623 );
+                end     ( -5.7633 0.01 2.5863 );
+            	nPoints	1000;
+			}
+            GaugeVOF02 // Toe of slope
+            {
+                type    uniform;
+                axis    xyz;
+                start   ( 0 0.01 0 );
+                end     ( 0.19901 0.01 1.9901 );
+            	nPoints	1000;
+			}
+		);
+	}
+    gaugesU
+    {
+        type    sets;
+        libs ("libsampling.so");
+        writeControl    outputTime;
+        writeInterval   1;
+        setFormat       raw;
+        surfaceFormat   raw;
+        interpolationScheme cellPointFace;
+        fields          ( U );
+        sets
+        (
+		    GaugeU01 // Inlet
+            {
+                type    uniform;
+                axis    xyz;
+                start   ( -5.9623 0.01 0.59623 );
+                end     ( -5.7633 0.01 2.5863 );
+            	nPoints	1000;
+			}
+            GaugeU02 // Toe of slope
+            {
+                type    uniform;
+                axis    xyz;
+                start   ( 0 0.01 0 );
+                end     ( 0.19901 0.01 1.9901 );
+            	nPoints	1000;
+			}
+        );
+    }
+}
+
+// ************************************************************************* //

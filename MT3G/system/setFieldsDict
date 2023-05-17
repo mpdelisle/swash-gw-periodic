@@ -1,0 +1,61 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+defaultFieldValues
+(
+    volScalarFieldValue alpha.water 0
+    //volScalarFieldValue porosityIndex 0
+);
+
+regions
+(
+    rotatedBoxToCell //boxToCell // Initial water level
+    {
+        //box (-5.7971 0 0.5193) (-4.7422 0.02 1.0165);
+	    origin   (-5.9702   0.02   0.597);
+	i   (19.9007   0   -1.99);
+	j   (0.0597   0   0.597);
+	k   (0   -0.02   0);
+
+	fieldValues
+        (
+            volScalarFieldValue alpha.water 1
+        );
+    }
+	
+    /*surfaceToCell // Set initial groundwater level (need to change slopeGW.stl file
+    {
+        file            "./slopeGW.stl";
+        outsidePoints   ((0.0 0.001 0.55));    // definition of outside
+        includeCut      true;              // cells cut by surface
+        includeInside   true;              // cells not on outside of surf
+        includeOutside  false;              // cells on outside of surf
+        nearDistance    -1;                 // cells with centre near surf
+                                            // (set to -1 if not used)
+        curvature       -100;                // cells within nearDistance
+                                            // and near surf curvature
+                                            // (set to -100 if not used)
+
+        fieldValues
+        (
+            volScalarFieldValue alpha.water 1
+        );
+    }*/
+);
+
+
+// ************************************************************************* //
